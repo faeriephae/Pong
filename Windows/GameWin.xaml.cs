@@ -38,7 +38,6 @@ namespace PongGame.Windows
         {
             try
             {
-                //this.DataContext = this;  //DOESNT WORK
                 rectP1.DataContext = _rectLeft;
                 rectP2.DataContext = _rectRight;
                 ball.DataContext = _ball;
@@ -259,14 +258,14 @@ namespace PongGame.Windows
 
                 if (_ball.IsMovingRight)
                 {
-                    // ball.X is in right field and colliding with right rectangle
+                    // ball.X is in right field and colliding with right rectangle.Y
                     temp = _ball.Y > _rectRight.YPosition - rectWidth && _ball.Y < _rectRight.YPosition + rectHeight;
                     collisionResult = _ball.X >= 760 && temp;
                 }
 
                 if (!_ball.IsMovingRight)
                 {
-                    // ball.X is in left field and colliding with left rectangle
+                    // ball.X is in left field and colliding with left rectangle.Y
                     temp = _ball.Y > _rectLeft.YPosition - rectWidth && _ball.Y < _rectLeft.YPosition + rectHeight;
                     collisionResult = _ball.X <= rectWidth && temp;
                 }
