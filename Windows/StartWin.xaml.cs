@@ -36,5 +36,12 @@ namespace PongGame.Windows
         {
             this.Close();
         }
+
+        private void btnOptions_Click( object sender, RoutedEventArgs e )
+        {
+            OptionsWin optionsWin = new OptionsWin();
+            optionsWin.Show();
+            this.Close();
+        }
     }
 }

@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         Title="Pong" Height="503" Width="824" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" SizeToContent="WidthAndHeight" SnapsToDevicePixels="True">
     <Window.Background>
-        <ImageBrush ImageSource="/Resources/moritz-mentges-2RLRbRkWtpc-unsplash.jpg"/>
+        <ImageBrush ImageSource="/Resources/moritz-mentges-2RLRbRkWtpc-unsplash.jpg" Stretch="UniformToFill"/>
     </Window.Background>
 
     <!-- ................................................................................................................................................ -->
@@ -17,12 +17,12 @@
                          FontFamily="Square721 BT" FontSize="50"  Foreground="#FFD56DE0" Content="{TemplateBinding Content}"
                          FontWeight="Normal" FontStretch="Normal" BorderBrush="{x:Null}" Height="65" Width="192">
                 </Button>
-                <Border x:Name="bor" Background="Transparent" />
+                <!--Needs the <Border></Border> to change background color as well wtf-->
+                <Border x:Name="border" Background="Transparent" /> 
             </Grid>
             <ControlTemplate.Triggers>
                 <Trigger  Property="IsMouseOver" Value="True">
                     <Setter TargetName="startbtn" Property="Foreground" Value="#FCD1FB" />
-                    <Setter TargetName="startbtn" Property="Background" Value="transparent"/>
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
@@ -35,7 +35,7 @@
         </Button>
 
         <Button Template="{StaticResource btns }" Content="Options"
-            x:Name="btnOptions" Canvas.Left="307" Canvas.Top="163"/>
+            x:Name="btnOptions" Canvas.Left="307" Canvas.Top="163" Click="btnOptions_Click"/>
 
         <Button Template="{StaticResource btns }" Content="Exit"
             x:Name="btnExit" Canvas.Left="307" Background="Transparent" Canvas.Top="228" Click="btnExit_Click" />
