@@ -4,6 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
+        xmlns:r="clr-namespace:PongGame.Resources"
         Title="Pong" Height="503" Width="824" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" SizeToContent="WidthAndHeight" SnapsToDevicePixels="True">
     <Window.Background>
         <ImageBrush ImageSource="/Resources/moritz-mentges-2RLRbRkWtpc-unsplash.jpg" Opacity="0.5" Stretch="UniformToFill">
