@@ -5,14 +5,14 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using PongGame.Objects;
 
-namespace PongGame
+namespace PongGame.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GameWin : Window
     {
-        public MainWindow()
+        public GameWin()
         {
             InitializeComponent();
             SetDataContext();
